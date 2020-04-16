@@ -1,13 +1,12 @@
-# ==========================================================================
-#
+#==========================================================================
+# This file is under License LGPL-3.0 (see details in the license file).
 # This file is a part of implementation for paper:
-# DeepMOT: A Differentiable Framework for Training Multiple Object Trackers.
+# How To Train Your Deep Multi-Object Tracker.
 # This contribution is headed by Perception research team, INRIA.
-#
 # Contributor(s) : Yihong Xu
 # INRIA contact  : yihong.xu@inria.fr
-#
-# ===========================================================================
+# created on 16th April 2020.
+#==========================================================================
 
 from utils.sot_utils import *
 from utils.DAN_utils import TrackUtil
@@ -107,7 +106,7 @@ def easy_birth_deathV4_rpn(munkres, bbox_track, det_boxes, curr_img, id_track, c
                            pre_id=None):
     """
     birth and death process during training
-    :param munkres: assignment matrix {0ï¼Œ1} for track_detection association, numpy array, [batch, H, W]
+    :param munkres: assignment matrix {0ï¼?} for track_detection association, numpy array, [batch, H, W]
     :param bbox_track: current tracks bboxes, torch Float tensor, [num_track, 4]
     :param curr_img: current frame, numpy array, [h,w,c]
     :param det_boxes: current detection (or gt) boxes [[id, bbox], [id, bbox]], list, [num_boxes, 5]

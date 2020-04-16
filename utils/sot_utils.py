@@ -1,13 +1,12 @@
-# ==========================================================================
-#
+#==========================================================================
+# This file is under License LGPL-3.0 (see details in the license file).
 # This file is a part of implementation for paper:
-# DeepMOT: A Differentiable Framework for Training Multiple Object Trackers.
+# How To Train Your Deep Multi-Object Tracker.
 # This contribution is headed by Perception research team, INRIA.
-#
 # Contributor(s) : Yihong Xu
 # INRIA contact  : yihong.xu@inria.fr
-#
-# ===========================================================================
+# created on 16th April 2020.
+#==========================================================================
 
 import torch.nn.functional as F
 import torch
@@ -441,7 +440,7 @@ def tracker_eval(net, x_crop, target_pos, target_sz, window, scale_z, p, templat
 
 def update_target_image_train(predicted, id_track, dets, img_curr, states, SOT_tracker, prev_id=None):
     """
-    :param predicted: assignment matrix {0ï¼Œ1} for track_detection association, numpy array, [batch, H, W]
+    :param predicted: assignment matrix {0ï¼?} for track_detection association, numpy array, [batch, H, W]
     :param id_track: current tracking ids, list
     :param dets: current detection (or gt) boxes [[id, bbox], [id, bbox]], list, [num_boxes, 5]
     :param img_curr: current frame, numpy array, [h,w,c]
