@@ -13,9 +13,9 @@
 </div>
 
 ## Environment setup <a name="environment-setup">
-This code has been tested on Ubuntu 16.04, Python 3.6, Pytorch=0.4.1, CUDA 9.2, GTX 1080Ti, Titan X and RTX Titan GPUs.
+This code has been tested on Ubuntu 16.04, Python 3.6, Pytorch=0.4.1, CUDA 9.2, GTX 1080Ti, Titan X, and RTX Titan GPUs.
 
-**warning: the results can be slightly different due to Pytorch version and CUDA version.**
+**Warning: the results can be slightly different due to Pytorch version and CUDA version.**
 
 - Clone the repository 
 ```
@@ -91,8 +91,8 @@ You can set write_images: True in the test_tracktor/experiments/cfgs/tracktor_pu
 
 - [Setup](#environment-setup) your environment
 - Go to the train_tracktor folder
-- Download MOT Dataset can be downloaded here: [MOT17Det](https://motchallenge.net/data/MOT17Det.zip), [MOT16Labels](https://motchallenge.net/data/MOT16Labels.zip), [MOT16-det-dpm-raw](https://motchallenge.net/data/MOT16-det-dpm-raw.zip) and [MOT17Labels](https://motchallenge.net/data/MOT17Labels.zip) .
-    2. Unzip all the data by executing:
+- Download MOT Dataset can be downloaded here: [MOT17Det](https://motchallenge.net/data/MOT17Det.zip), [MOT16Labels](https://motchallenge.net/data/MOT16Labels.zip), [MOT16-det-dpm-raw](https://motchallenge.net/data/MOT16-det-dpm-raw.zip) and [MOT17Labels](https://motchallenge.net/data/MOT17Labels.zip).
+- Unzip all the data by executing:
     ```
     unzip -d MOT17Det MOT17Det.zip
     unzip -d MOT16Labels MOT16Labels.zip
@@ -128,7 +128,7 @@ pip install --upgrade tensorflow
 [DHN data (google drive)](https://drive.google.com/file/d/1ICCm6tH_AgPSLzD3qac-6sYOvTIwwTNW/view?usp=sharing) or <br />
 [DHN data (tencent cloud)](https://share.weiyun.com/5OKPHxJ)
 
-- Put the data to train_DHN/data
+- unzip DHN_data and put the *DHN_data* folder to *train_DHN/*
 - Run:
 ```
 python train_DHN/train_DHN.py --is_cuda --bidirectional
@@ -152,8 +152,8 @@ pip install --upgrade tensorflow
 
 ### Evaluation
 You can run *test_tracktor/experiments/scripts/evaluate.py* to evaluate your tracker's performance.
-- fill the list *predt_pth* in the code with the folder where the results (txt files) are saved.
-- make sure the data pth is correctly set.
+- fill the list *predt_pth* in the code with the folder where the results (.txt files) are saved.
+- make sure the data path is correctly set.
 - then run
 ```
 python test_tracktor/experiments/scripts/evaluate.py
@@ -206,7 +206,7 @@ If you find this code useful, please star the project and consider citing:
 </div>
 
 ## Acknowledgement <a name="Acknowledgement">
-Some codes are modified and network pretrained weights are obtained from the following repositories: <br />
+Some code is modified and network pre-trained weights are obtained from the following repositories: <br />
 
 
 **Single Object Tracker**: [**SiamRPN**](https://github.com/foolwood/DaSiamRPN), [**Tracktor**](https://github.com/phil-bergmann/tracking_wo_bnw/tree/iccv_19), [**Faster-RCNN pytorch implementation**](https://github.com/jwyang/faster-rcnn.pytorch/).
@@ -259,15 +259,15 @@ Training and testing Data from: <br />
 **MOT Challenge**: [**motchallenge**](https://motchallenge.net/data)
 ```
 @article{MOT16,
-	title = {{MOT}16: {A} Benchmark for Multi-Object Tracking},
-	shorttitle = {MOT16},
-	url = {http://arxiv.org/abs/1603.00831},
-	journal = {arXiv:1603.00831 [cs]},
-	author = {Milan, A. and Leal-Taix\'{e}, L. and Reid, I. and Roth, S. and Schindler, K.},
-	month = mar,
-	year = {2016},
-	note = {arXiv: 1603.00831},
-	keywords = {Computer Science - Computer Vision and Pattern Recognition}
+    title = {{MOT}16: {A} Benchmark for Multi-Object Tracking},
+    shorttitle = {MOT16},
+    url = {http://arxiv.org/abs/1603.00831},
+    journal = {arXiv:1603.00831 [cs]},
+    author = {Milan, A. and Leal-Taix\'{e}, L. and Reid, I. and Roth, S. and Schindler, K.},
+    month = mar,
+    year = {2016},
+    note = {arXiv: 1603.00831},
+    keywords = {Computer Science - Computer Vision and Pattern Recognition}
 }
 ```
 
