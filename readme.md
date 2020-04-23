@@ -34,7 +34,7 @@ sudo apt-get install -y singularity-container
 ```
 - Download the Singularity image: <br />
 [tracker.sif (google drive)](https://drive.google.com/file/d/1sR-tTtprbkQ1NAIpY2oiQjSrbuxoYTCc/view?usp=sharing)  or <br />
-[tracker.sif (tencent cloud)]() <br />
+[tracker.sif (tencent cloud)](https://share.weiyun.com/5RK76iq) <br />
 - Open a new terminal
 - Launch a Singularity image
 ```shell
