@@ -9,7 +9,7 @@
 
 
 <div align="center">
-  <img src="https://gitlab.inria.fr/yixu/deepmot/raw/master/pipelineV3.png" width="900px" />
+  <img src="https://gitlab.inria.fr/yixu/deepmot/-/raw/master/teaser.pdf?inline=false" width="900px" />
 </div>
 
 ## Environment setup <a name="environment-setup">
