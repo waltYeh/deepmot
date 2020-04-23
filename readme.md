@@ -9,8 +9,14 @@
 
 
 <div align="center">
-  <img src="https://gitlab.inria.fr/yixu/deepmot/-/raw/master/teaser.pdf?inline=false" width="900px" />
+  <img src="https://gitlab.inria.fr/yixu/deepmot/-/raw/master/teaser.pdf" width="900px" />
 </div>
+
+<object data="https://gitlab.inria.fr/yixu/deepmot/-/raw/master/teaser.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://gitlab.inria.fr/yixu/deepmot/-/raw/master/teaser.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://gitlab.inria.fr/yixu/deepmot/-/raw/master/teaser.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
 ## Environment setup <a name="environment-setup">
 This code has been tested on Ubuntu 16.04, Python 3.6, Pytorch=0.4.1, CUDA 9.2, GTX 1080Ti, Titan X and RTX Titan GPUs.
