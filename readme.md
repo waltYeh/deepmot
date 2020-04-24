@@ -209,7 +209,10 @@ If you find this code useful, please star the project and consider citing:
 Some code is modified and network pre-trained weights are obtained from the following repositories: <br />
 
 
-**Single Object Tracker**: [**SiamRPN**](https://github.com/foolwood/DaSiamRPN), [**Tracktor**](https://github.com/phil-bergmann/tracking_wo_bnw/tree/iccv_19), [**Faster-RCNN pytorch implementation**](https://github.com/jwyang/faster-rcnn.pytorch/).
+**Single Object Tracker**: [**SiamRPN**](https://github.com/foolwood/DaSiamRPN), [**Tracktor**](https://github.com/phil-bergmann/tracking_wo_bnw/tree/iccv_19), 
+[**jwyang/faster-rcnn.pytorch**](https://github.com/jwyang/faster-rcnn.pytorch/), [**rbgirshick/py-faster-rcnn**](https://github.com/rbgirshick/py-faster-rcnn/),
+[**longcw/faster_rcnn_pytorch**](https://github.com/longcw/faster_rcnn_pytorch), [**endernewton/tf-faster-rcnn**](https://github.com/endernewton/tf-faster-rcnn),
+[**ruotianluo/pytorch-faster-rcnn**](https://github.com/ruotianluo/pytorch-faster-rcnn).
 ```
 @inproceedings{Zhu_2018_ECCV,
   title={Distractor-aware Siamese Networks for Visual Object Tracking},
