@@ -35,7 +35,7 @@ ex = Experiment()
 ex.add_config(root_pth+'/experiments/cfgs/tracktor_private.yaml')
 
 # hacky workaround to load the corresponding configs and not having to hardcode paths here
-ex.add_config(root_pth + ex.configurations[0]._conf['tracktor']['reid_network_config'])
+ex.add_config('/'.join(osp.dirname(__file__).split('/')[:-3]) + ex.configurations[0]._conf['tracktor']['reid_network_config'])
 ex.add_config(root_pth + ex.configurations[0]._conf['tracktor']['obj_detect_config'])
 
 # Tracker = ex.capture(Tracker, prefix='tracker.tracker')
@@ -119,7 +119,7 @@ def my_main(tracktor, siamese, _config):
 
     # reid
     reid_network = resnet50(pretrained=False, **siamese['cnn'])
-    reid_network.load_state_dict(torch.load(root_pth + tracktor['reid_network_weights']))
+    reid_network.load_state_dict(torch.load('/'.join(osp.dirname(__file__).split('/')[:-3]) + tracktor['reid_network_weights']))
     reid_network.eval()
     reid_network.cuda()
 

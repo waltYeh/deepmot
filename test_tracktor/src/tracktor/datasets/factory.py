@@ -1,8 +1,19 @@
+#==========================================================================
+# This file is under License LGPL-3.0 (see details in the license file).
+# This file is a part of implementation for paper:
+# How To Train Your Deep Multi-Object Tracker.
+# This contribution is headed by Perception research team, INRIA.
+# Contributor(s) : Yihong Xu
+# INRIA contact  : yihong.xu@inria.fr
+# created on 16th April 2020.
+# the code is modified based on:
+# https://github.com/phil-bergmann/tracking_wo_bnw/tree/iccv_19
+# https://github.com/jwyang/faster-rcnn.pytorch/
+#==========================================================================
 
 from .mot_wrapper import MOT17_Wrapper, MOT19CVPR_Wrapper, MOT17LOWFPS_Wrapper
 from .mot_siamese_wrapper import MOT_Siamese_Wrapper
 from .mot15_wrapper import MOT15_Wrapper
-from .marcuhmot import MarCUHMOT
 
 
 _sets = {}
@@ -33,11 +44,6 @@ for split in ['train', 'smallVal', 'smallTrain']:
 for split in ['PETS09-S2L1', 'TUD-Stadtmitte', 'TUD-Campus', 'train', 'test', 'last3train']:
     name = f'mot15_{split}'
     _sets[name] = (lambda *args, split=split: MOT15_Wrapper(split, *args))
-
-for split in ['smallTrain', 'smallVal', 'train']:
-    name = f'marcuhmot_{split}'
-    _sets[name] = (lambda *args, split=split: MarCUHMOT(split, *args))
-
 
 class Datasets(object):
     """A central class to manage the individual dataset loaders.

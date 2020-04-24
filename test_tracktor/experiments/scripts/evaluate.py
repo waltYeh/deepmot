@@ -25,7 +25,7 @@ with open(root_pth + '/experiments/cfgs/tracktor_pub_reid.yaml', 'r') as f:
   tracktor = yaml.load(f)['tracktor']
 
 threshold = 0.5
-predt_pth = ["EnterYourTxtResultsFilesPath"]
+predt_pth = ["/mnt/beegfs/perception/yixu/backup_subissioncvpr/tracktor_test-bacpupcvpr/output/log_full/"]
 
 for predtpth in predt_pth:
 

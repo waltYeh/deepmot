@@ -10,17 +10,9 @@
 # https://github.com/phil-bergmann/tracking_wo_bnw/tree/iccv_19
 #==========================================================================
 
-import shutil
 import numpy as np
-import torch
-import torch.nn.functional as F
-from torch.autograd import Variable
 import csv
-import cv2
-import sys
 import copy
-import motmetrics
-import os
 persons_class = ["1"]
 def xywh2xyxy(bbox):
     """
