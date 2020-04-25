@@ -1,0 +1,13 @@
+This is only some explainations of Figure 2 based on the code. The function forward() in deepmot/train_DHN/DHN.py is all you need to understand the DHN structure, although I know that the loss function and the gradient computation are also of interest. I made some comment
+
+1. DHN processes frames separately, the RNN in DHN runs for every single frame alone, without any memory of other frames, similar to Hungarian algorithm;
+2. Bi-RNN ensures a global receptive field for every input element in the distance matrix, single directional RNN does not have this property;
+3. The flattened MxN array is the sequential inputs for the first Bi-RNN, each input of this sequence is a scalar value, a single element of distance matrix;
+4. The "hidden units" in Figure 2 means the size of the array h, which is transfered from one GRU block to the next. An output of one GRU block is a copy of the hidden units, array h. In the code, it is a array of size 256;
+5. This GRU consists of two GRU layers stacked together. You also said this yesterday :) I think you are better than me on GRU because you have programmed it with pytorch :)
+6. The two RNNs in Figure 2 are of different structures, their input sizes are different, as shown in the code, the do have the same hidden size 256, as mentioned in the paper;
+6. Sigmoid is done after 3 fully connected linear layers in code, but in the paper, it is done before FC layers.
+
+
+I guess there are some large files in this repo, so it took me a very long time to clone it. 
+
